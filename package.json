@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "watch": "nodemon",
-    "seed": "node seeders/seeds.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "npm start",
+    "watch": "nodemon server.js",
+    "start:dev": "concurrently \"npm run watch\" \"cd client && npm start\"",
+    "install": "npm i && cd client && npm i",
+    "seed": "npm run seed"
   },
   "keywords": [],
   "author": "",
@@ -18,11 +21,13 @@
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "graphql": "^15.5.0",
+    "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "mongoose": "^5.9.9"
   },
   "devDependencies": {
+    "concurrently": "^6.0.2",
     "nodemon": "^2.0.3"
   }
 }
