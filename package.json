@@ -9,7 +9,7 @@
     "watch": "nodemon server.js",
     "start:dev": "concurrently \"npm run watch\" \"cd client && npm start\"",
     "install": "cd client && npm i",
-    "seed": "npm run seed",
+    "seed": "node seeders/seeds.js",
     "heroku-postbuild": "cd client && npm run build"
   },
   "keywords": [],
