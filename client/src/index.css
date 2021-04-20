@@ -840,6 +840,14 @@ nav a:hover {
   align-items: center;
 }
 
+.hidden-lg-up {
+  display: block;
+}
+
+.hidden-md-down {
+  display: none;
+}
+
 .col-auto {
   flex-grow: 1;
   flex-basis: 0;
@@ -1074,6 +1082,14 @@ nav a:hover {
   nav {
     width: auto;
     justify-content: flex-end;
+  }
+
+  .hidden-lg-up {
+    display: none;
+  }
+
+  .hidden-md-down {
+    display: block;
   }
 
   .page-title {
