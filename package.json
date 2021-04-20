@@ -8,7 +8,7 @@
     "start:prod": "npm start",
     "watch": "nodemon server.js",
     "start:dev": "concurrently \"npm run watch\" \"cd client && npm start\"",
-    "install": "npm i && cd client && npm i",
+    "install": "cd client && npm i",
     "seed": "npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
